@@ -25,13 +25,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+         <img src={logo} className="App-logo" alt="logo" />
         </header>
         <section>
-          <Task title="Set new quiz" description="New quiz" />
-          <Task title="Mark Coursework" description="Be generous" />
-          <Task title="Plan Day 2" description="More fun coding" />
-          <Task title="Drink Captain Morgan" description="Chillax with a rum and coke" />
+          {dummyTaskData.map(item => <Task title={item.title} description={item.description}/>)}
         </section>
       </div>
     );
