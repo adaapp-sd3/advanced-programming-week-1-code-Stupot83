@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import Task from './tasks/Task';
+import Task from './tasks/FunctionalTask';
 
 const dummyTaskData = [
   {
@@ -28,7 +28,7 @@ class App extends Component {
          <img src={logo} className="App-logo" alt="logo" />
         </header>
         <section>
-          {dummyTaskData.map(item, i => <Task key={i} title={item.title} description={item.description}/>)}
+          {dummyTaskData.map(item => <Task title={item.title} description={item.description}/>)}
         </section>
       </div>
     );
