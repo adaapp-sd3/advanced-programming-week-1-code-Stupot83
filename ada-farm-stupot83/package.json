@@ -1,12 +1,13 @@
 {
-  "name": "encapsulation-workshop",
+  "name": "ada-farm",
   "version": "1.0.0",
-  "description": "ADA workshop on encapsulation",
+  "description": "A starter template for the inheritance and polymorphism workshop",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "serve ."
   },
-  "author": "Stuart Priestley",
+  "author": "Ali Blackwell",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
