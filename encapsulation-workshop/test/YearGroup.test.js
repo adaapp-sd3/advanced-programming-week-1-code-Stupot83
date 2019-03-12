@@ -17,7 +17,7 @@ describe('and the year is set at 2', () => {
     let myYearGroup = new YearGroup(2, "Boris");
 
     it('should return the correct value for year', () => {
-        expect(myYearGroup.getYear()).equals(2);
+        expect(myYearGroup.getYear()).to.equal(2);
     });
 });
 
@@ -26,7 +26,7 @@ describe('and the head of year is set at Hazel', () => {
     let myYearGroup = new YearGroup(9, "Hazel");
 
     it('should return the correct name for the head of year', () => {
-        expect(myYearGroup.getHeadOfYear()).equals("Hazel");
+        expect(myYearGroup.getHeadOfYear()).to.equal("Hazel");
     });
 });
 

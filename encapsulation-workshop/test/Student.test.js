@@ -8,7 +8,7 @@ describe('and a new instantiation of the student class is created with the corre
     let newStudent = new Student("Stuart", "11B");
     
     it('should create a new Student object with the correct data', ()=>{
-        expect(newStudent.name).equals("Stuart");
-        expect(newStudent.form).equals("11B");
+        expect(newStudent.name).to.equal("Stuart");
+        expect(newStudent.tutorGroup).to.equal("11B");
     });
 });

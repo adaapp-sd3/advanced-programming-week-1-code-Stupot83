@@ -1,15 +1,20 @@
 class Student {
-    constructor(name, form, year) {
+    constructor(name, tutorGroup) {
         this.name = name;
-        this.form = form;
-        this.year = year;
+        this.tutorGroup = tutorGroup;
     }
 
     getName() {
         return this.name;
     }
 
-    getForm() {
+    getYearGroup(){
+        this.yearGroup = this.tutorGroup.match(/\d+/g).map(Number)[0];
+        return this.yearGroup;
+    }
+
+    getForm(){
+        this.form = this.tutorGroup.match(/[a-zA-Z]/g).join("");
         return this.form;
     }
 
