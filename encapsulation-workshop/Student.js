@@ -8,12 +8,12 @@ class Student {
         return this.name;
     }
 
-    getYearGroup(){
+    getYearGroup() {
         this.yearGroup = this.tutorGroup.match(/\d+/g).map(Number)[0];
         return this.yearGroup;
     }
 
-    getForm(){
+    getForm() {
         this.form = this.tutorGroup.match(/[a-zA-Z]/g).join("");
         return this.form;
     }
