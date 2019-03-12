@@ -3,7 +3,16 @@ const expect = chai.expect;
 
 const Student = require('../Student.js');
 
-describe('and a new instantiation of the student class is created with the correct fields', ()=> {
+describe('and a new instantiation of the Student class is created', () => {
+
+    let newStudent = new Student();
+
+    it('should allow an object instantiated from the class', () => {
+        expect(newStudent).to.be.an.instanceOf(Student);
+    });
+});
+
+describe('and the Student object is created with the correct fields', ()=> {
 
     let newStudent = new Student("Stuart", "11B");
     
@@ -37,6 +46,15 @@ describe('and the form is set to B', ()=> {
     
     it('should confirm the correct value for form', ()=>{
         expect(newStudent.getForm()).to.equal("B");
+    });
+});
+
+describe('and the student object is constructed', () => {
+
+    let newStudent = new Student("Stuart", "11B");
+
+    it('and the correct keys are returned', () => {
+        expect(newStudent).to.have.all.keys('name', 'tutorGroup');
     });
 });
 

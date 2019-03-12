@@ -3,7 +3,16 @@ const expect = chai.expect;
 
 const Teacher = require('../Teacher.js');
 
-describe('and a new instantiation of the teacher class is created', ()=> {
+describe('and a new instantiation of the Teacher class is created', () => {
+
+    let newTeacher = new Teacher();
+
+    it('should allow an object instantiated from the class', () => {
+        expect(newTeacher).to.be.an.instanceOf(Teacher);
+    });
+});
+
+describe('and the teacher object is created with the correct fields', ()=> {
 
     let newTeacher = new Teacher("Timothy", "TH", "Computer Science");
     
@@ -59,5 +68,14 @@ describe('and the years of service is set to 25', () => {
 
     it('should return the correct value for years of service ', () => {
         expect(newTeacher.getYearsOfService()).to.equal(25);
+    });
+});
+
+describe('and the teacher object is constructed', () => {
+
+    let newTeacher = new Teacher("Timothy", "TH", "Computer Science");
+
+    it('and the correct keys are returned', () => {
+        expect(newTeacher).to.have.all.keys('yearsOfService', 'name', 'initials', 'subject');
     });
 });
