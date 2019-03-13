@@ -1,16 +1,12 @@
 class Field {
     constructor(name, health, x, y, width, height) {
-        this._name = name;
+        this.name = name;
         this.health = health;
         this._x = x;
         this._y = y;
         this._width = width;
         this._height = height;
         this._crops = [];
-    }
-
-    getName() {
-        return this._name;
     }
 
     getXPosition() {
@@ -46,7 +42,7 @@ class Field {
     plant(x, y) {
         console.log('new plant');
         // Get the crop name from the field name
-        var cropName = this.getName().split(' '); // => e.g. "Wheat"
+        var cropName = this.name.split(' '); // => e.g. "Wheat"
         // Add a new crop to the field's list of crops
         this.getCrops().push(new Crop(cropName[0], this, x, y));
     }
