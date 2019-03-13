@@ -35,12 +35,12 @@ class Farmer {
 
     farmerKeyPressed() {
         if (keyCode == ENTER) {
-            this.field.plant(this.x, this.y)
+            this.field.plant(this.x, this.y);
         }
     }
 
     draw() {
-        var bobAmount = Math.sin(millis() / 60) * 3
+        var bobAmount = Math.sin(millis() / 60) * 3;
 
         image(
             this.image,
@@ -48,6 +48,6 @@ class Farmer {
             this.y + bobAmount,
             this.width,
             this.height
-        )
+        );
     }
 } // End of the Farmer class oooarrr

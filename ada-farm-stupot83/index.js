@@ -45,7 +45,7 @@ function draw() {
     farmer.update();
     farmer.draw();
 
-    setActiveFieldFromFarmerPosition()
+    setActiveFieldFromFarmerPosition();
 
     if (activeField) {
         noStroke();
