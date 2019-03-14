@@ -51,7 +51,7 @@ function draw() {
         noStroke();
         fill('black');
         textSize(20);
-        text(activeField.name, 25, 40);
+        text(activeField.getName(), 25, 40);
     }
 }
 

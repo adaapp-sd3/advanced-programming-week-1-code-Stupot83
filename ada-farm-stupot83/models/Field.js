@@ -1,7 +1,7 @@
 class Field {
     constructor(name, health, x, y, width, height) {
-        this.name = name;
-        this.health = health;
+        this._name = name;
+        this._health = health;
         this._x = x;
         this._y = y;
         this._width = width;
@@ -9,24 +9,60 @@ class Field {
         this._crops = [];
     }
 
+    getName() {
+        return this._name;
+    }
+
+    setName(name) {
+        this._name = name;
+    }
+
+    getHealth() {
+        return this._health;
+    }
+
+    setHealth(health) {
+        this._health = health;
+    }
+
     getXPosition() {
         return this._x;
+    }
+
+    setXPosition(x) {
+        this._x = x;
     }
 
     getYPosition() {
         return this._y;
     }
 
+    setYPosition(y) {
+        this._y = y;
+    }
+
     getWidth() {
         return this._width;
+    }
+
+    setWidth(width) {
+        this._width = width;
     }
 
     getHeight() {
         return this._height;
     }
 
+    setHeight(height) {
+        this._height = height;
+    }
+
     getCrops() {
         return this._crops;
+    }
+
+    setCrops() {
+        this._crops = crops;
     }
 
     draw() {
