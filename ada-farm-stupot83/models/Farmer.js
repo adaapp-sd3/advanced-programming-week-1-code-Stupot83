@@ -13,78 +13,74 @@ class Farmer {
         alert(words);
     }
 
+    getActiveField() {
+        return this._field;
+    }
+
     setActiveField(field) {
         this._field = field;
     }
 
-    getField() {
-        return this._field;
-    }
-
-    setField(field) {
-        this._field = field;
-    }
-
-    getUserName() {
+    get userName() {
         return this._userName;
     }
 
-    setUserName(userName) {
-        this._userName = userName;
+    set userName(newUserName) {
+        this._userName = newUserName;
     }
 
-    getImage() {
+    get image() {
         return this._image;
     }
 
-    setImage(image) {
-        this._image = image;
+    set image(newImage) {
+        this._image = newImage;
     }
 
-    getXPosition() {
+    get xPosition() {
         return this._x;
     }
 
-    setXPosition(x) {
-        this._x = x;
+    set xPosition(newX) {
+        this._x = newX;
     }
 
-    getYPosition() {
+    get yPosition() {
         return this._y;
     }
 
-    setYPosition(y) {
-        this._y = y;
+    set yPosition(newY) {
+        this._y = newY;
     }
 
-    getWidth() {
+    get width() {
         return this._width;
     }
 
-    setWidth(width) {
-        this._width = width;
+    set width(newWidth) {
+        this._width = newWidth;
     }
 
-    getHeight() {
+    get height() {
         return this._height;
     }
 
-    setHeight(height) {
-        this._height = height;
+    set height(newHeight) {
+        this._height = newHeight;
     }
 
     update() {
         if (keyIsDown(RIGHT_ARROW)) {
-            this.setXPosition(this.getXPosition() + 3);
+            this.xPosition = this.xPosition + 3;
         }
         if (keyIsDown(LEFT_ARROW)) {
-            this.setXPosition(this.getXPosition() - 3);
+            this.xPosition = this.xPosition - 3;
         }
         if (keyIsDown(DOWN_ARROW)) {
-            this.setYPosition(this.getYPosition() + 3);
+            this.yPosition = this.yPosition + 3;
         }
         if (keyIsDown(UP_ARROW)) {
-            this.setYPosition(this.getYPosition() - 3);
+            this.yPosition = this.yPosition - 3;
         }
 
     }
@@ -92,7 +88,7 @@ class Farmer {
     farmerKeyPressed() {
         
         if (keyCode == ENTER) {
-            this.getField().plant(this.getXPosition(), this.getYPosition());
+            this.getActiveField().plant(this.xPosition, this.yPosition);
         }
     }
 
@@ -100,11 +96,11 @@ class Farmer {
         var bobAmount = Math.sin(millis() / 60) * 3;
 
         image(
-            this.getImage(),
-            this.getXPosition(),
-            this.getYPosition() + bobAmount,
-            this.getWidth(),
-            this.getHeight()
+            this.image,
+            this.xPosition,
+            this.yPosition + bobAmount,
+            this.width,
+            this.height
         );
     }
 } // End of the Farmer class oooarrr
