@@ -89,6 +89,7 @@ class Farmer {
         
         if (keyCode == ENTER) {
             this.getActiveField().plant(this.xPosition, this.yPosition);
+            this.getActiveField().birth(this.xPosition, this.yPosition);
         }
     }
 

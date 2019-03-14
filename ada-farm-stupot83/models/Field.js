@@ -88,8 +88,8 @@ class Field {
     }
 
     plant(x, y) {
+
         var cropName = this.name.split(' ');
-        var animalName = this.name.split(' ');
 
         if (cropName[0] == "Carrot") {
             this.crops.push(new Crop(cropName[0], this, x, y));
@@ -103,6 +103,12 @@ class Field {
             this.crops.push(new Crop(cropName[0], this, x, y));
             console.log('new plant');
         }
+    }
+
+    birth(x, y) {
+
+        var animalName = this.name.split(' ');
+
         if (animalName[0] == "Cow") {
             this.animals.push(new Animal(animalName[0], this, x, y));
             console.log('new animal');
