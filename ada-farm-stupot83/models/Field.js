@@ -117,12 +117,6 @@ class Field {
         }
     }
 
-    birth(x, y) {
-        console.log('new animal');
-        var animalName = this.getName().split(' ');
-        this.getAnimals().push(new Animal(animalName[0], this, x, y));
-    }
-
     containsPoint(x, y) {
         var top = this.getYPosition();
         var bottom = this.getYPosition() + this.getHeight();

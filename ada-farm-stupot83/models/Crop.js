@@ -13,104 +13,104 @@ class Crop {
         this.draw();
     }
 
-    getType() {
+    get type() {
         return this._type;
     }
 
-    setType(type) {
-        this._type = type;
+    set type(newType) {
+        this._type = newType;
     }
 
-    getHealth() {
+    get health() {
         return this._health;
     }
 
-    setHealth(health) {
-        this._health = health;
+    set health(newHealth) {
+        this._health = newHealth;
     }
 
-    getField() {
+    get field() {
         return this._field;
     }
 
-    setField(field) {
-        this._field = field;
+    set field(newField) {
+        this._field = newField;
     }
 
-    getBirthStamp() {
+    get birthStamp() {
         return this._birthstamp;
     }
 
-    setBirthStamp(birthstamp) {
-        this._birthstamp = birthstamp;
+    set birthStamp(newBirthstamp) {
+        this._birthstamp = newBirthstamp;
     }
 
-    getAge() {
-        return millis() / 1000 - this.getBirthStamp();
+    get age() {
+        return millis() / 1000 - this.birthStamp;
     }
 
-    getHealthySize() {
+    get healthySize() {
         return this._healthySize;
     }
 
-    setHealthySize(healthysize) {
-        this._healthySize = healthysize;
+    set healthySize(newHealthysize) {
+        this._healthySize = newHealthysize;
     }
 
-    getWidth() {
+    get width() {
         return this._width;
     }
 
-    setWidth(width) {
-        this._width = width;
+    set width(newWidth) {
+        this._width = newWidth;
     }
 
-    getHeight() {
+    get height() {
         return this._height;
     }
 
-    setHeight(height) {
-        this._height = height;
+    set height(newHeight) {
+        this._height = newHeight;
     }
 
-    getImage() {
+    get image() {
         return this._image;
     }
 
-    setImage(image) {
-        this._image = image;
+    set image(newImage) {
+        this._image = newImage;
     }
 
-    getXPosition() {
+    get xPosition() {
         return this._x;
     }
 
-    setXPosition(x) {
-        this._x = x;
+    set xPosition(newX) {
+        this._x = newX;
     }
 
-    getYPosition() {
+    get yPosition() {
         return this._y;
     }
 
-    setYPosition(y) {
-        this._y = y;
+    set yPosition(newY) {
+        this._y = newY;
     }
 
     draw() {
 
-        if (this.getAge() < this.getHealthySize()) {
-            var width = this.getWidth() * this.getAge();
-            var height = this.getHeight() * this.getAge();
+        if (this.age < this.healthySize) {
+            var width = this.width * this.age;
+            var height = this.height * this.age;
         } else {
             var width = 30;
             var height = 30;
         }
 
         image(
-            this.getImage(),
-            this.getXPosition(),
-            this.getYPosition(),
+            this.image,
+            this.xPosition,
+            this.yPosition,
             width,
             height
         );
