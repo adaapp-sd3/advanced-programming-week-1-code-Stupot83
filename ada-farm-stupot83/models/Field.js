@@ -7,6 +7,7 @@ class Field {
         this._width = width;
         this._height = height;
         this._crops = [];
+        this._animals = [];
     }
 
     getName() {
@@ -65,6 +66,14 @@ class Field {
         this._crops = crops;
     }
 
+    getAnimals() {
+        return this._animals;
+    }
+
+    setAnimals() {
+        this._animals = animals;
+    }
+
     draw() {
         stroke('#7c4011');
         strokeWeight(10);
@@ -73,14 +82,45 @@ class Field {
         for (var crop of this.getCrops()) {
             crop.draw();
         }
+        for (var animal of this.getAnimals()) {
+            animal.draw();
+        }
     }
 
     plant(x, y) {
-        console.log('new plant');
-        // Get the crop name from the field name
-        var cropName = this.name.split(' '); // => e.g. "Wheat"
-        // Add a new crop to the field's list of crops
-        this.getCrops().push(new Crop(cropName[0], this, x, y));
+        var cropName = this.getName().split(' ');
+        var animalName = this.getName().split(' ');
+
+        if (cropName[0] == "Carrot") {
+            this.getCrops().push(new Crop(cropName[0], this, x, y));
+            console.log('new plant');
+        }
+        if (cropName[0] == "Pumpkin") {
+            this.getCrops().push(new Crop(cropName[0], this, x, y));
+            console.log('new plant');
+        }
+        if (cropName[0] == "Wheat") {
+            this.getCrops().push(new Crop(cropName[0], this, x, y));
+            console.log('new plant');
+        }
+        if (animalName[0] == "Cow") {
+            this.getAnimals().push(new Animal(animalName[0], this, x, y));
+            console.log('new animal');
+        }
+        if (animalName[0] == "Pig") {
+            this.getAnimals().push(new Animal(animalName[0], this, x, y));
+            console.log('new animal');
+        }
+        if (animalName[0] == "Sheep") {
+            this.getAnimals().push(new Animal(animalName[0], this, x, y));
+            console.log('new animal');
+        }
+    }
+
+    birth(x, y) {
+        console.log('new animal');
+        var animalName = this.getName().split(' ');
+        this.getAnimals().push(new Animal(animalName[0], this, x, y));
     }
 
     containsPoint(x, y) {

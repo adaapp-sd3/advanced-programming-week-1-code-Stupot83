@@ -90,6 +90,7 @@ class Farmer {
     }
 
     farmerKeyPressed() {
+        
         if (keyCode == ENTER) {
             this.getField().plant(this.getXPosition(), this.getYPosition());
         }

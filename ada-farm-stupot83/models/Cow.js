@@ -1,7 +1,7 @@
-class Carrot extends Crop {
+class Cow extends Animal {
     constructor(field, x, y) {
         super(field, x, y);
 
-        this.setType("Carrot");
+        this.setType("Cow");
     }
 }

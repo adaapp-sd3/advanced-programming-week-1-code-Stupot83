@@ -13,19 +13,22 @@ function setup() {
     farmer.speak('Ey oh ey oh ey oh');
 
     fields.push(
-        new Field('Wheat field', 10, 25, 75, 350, 175)
+        new Field('Carrot field', 10, 25, 75, 350, 275)
     );
     fields.push(
-        new Field('Carrot field', 10, 25, 275, 350, 125)
+        new Field('Wheat field', 10, 500, 75, 350, 275)
     );
     fields.push(
-        new Field('Tiger field', 10, 400, 75, 200, 325)
+        new Field('Pumpkin field', 10, 975, 75, 350, 275)
     );
     fields.push(
-        new Field('Carrot field', 10, 25, 425, 200, 275)
+        new Field('Cow field', 10, 25, 400, 350, 275)
     );
     fields.push(
-        new Field('Pumpkin field', 10, 250, 425, 350, 275)
+        new Field('Pig field', 10, 500, 400, 350, 275)
+    );
+    fields.push(
+        new Field('Sheep field', 10, 975, 400, 350, 275)
     );
 }
 
@@ -59,7 +62,7 @@ function setActiveFieldFromFarmerPosition() {
     activeField = null;
     farmer.setActiveField(null);
     for (var field of fields) {
-        if (field.containsPoint(farmer.x, farmer.y)) {
+        if (field.containsPoint(farmer.getXPosition(), farmer.getYPosition())) {
             activeField = field;
             farmer.setActiveField(field);
         }

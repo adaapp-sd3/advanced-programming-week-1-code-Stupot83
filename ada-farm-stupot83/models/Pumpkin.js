@@ -1,6 +1,6 @@
 class Pumpkin extends Crop {
-    constructor(type, field, x, y) {
-    super(type, field, x, y) ;
+    constructor(field, x, y) {
+    super(field, x, y) ;
 
     this.setType("Pumpkin");
     }
